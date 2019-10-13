@@ -7,8 +7,11 @@ Here's the CSDAWORK lab agenda:
 
 ### Part 1 Lab familiarization and set-up	
 Lab 1.1. Lab introduction.	
+
 Lab 1.2. Cisco DNA Center initial setup  and familiarization	
+
 Lab 1.3. Cisco ISE setup and overview	
+
 Lab 1.4. Cisco DNA Center with Cisco ISE integration	
 
 ### Part 2 Building the Fabric	

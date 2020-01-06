@@ -4,7 +4,7 @@ service timestamps log datetime msec
 !
 hostname POD${pod}_${router}
 !
-enable password Admin9sisko$
+enable password Admin${pod}sisko$
 !
 aaa new-model
 !
@@ -15,14 +15,14 @@ archive
   logging enable
   notify syslog contenttype plaintext
 !
-username cliadmin password 0 Admin9sisko$
+username cliadmin password 0 Admin${pod}sisko$
 !
 interface Loopback0
  ip address 10.1${pod}.127.10${router.substring(1,2)} 255.255.255.255
  ip pim sparse-mode
  ip router isis 
 !
-interface GigabitEthernet0/0/0
+interface GigabitEthernet0/0/1
  dampening
  #if (${router} == 'R1')
  ip address 10.1${pod}.80.3 255.255.255.254
@@ -54,5 +54,5 @@ ip pim rp-address 10.1${pod}.66.1
 ip pim register-source Loopback0
 !
 snmp-server community cisco RO
-snmp-server community Admin9sisko RW
+snmp-server community Admin${pod}sisko$ RW
 !         

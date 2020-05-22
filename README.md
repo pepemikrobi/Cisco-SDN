@@ -8,11 +8,9 @@ Here's the CSDAWORK lab agenda:
 ### Part 1 Lab familiarization and set-up	
 Lab 1.1. Lab introduction.	
 
-Lab 1.2. Cisco DNA Center initial setup  and familiarization	
+Lab 1.2. Cisco ISE setup and overview	
 
-Lab 1.3. Cisco ISE setup and overview	
-
-Lab 1.4. Cisco DNA Center with Cisco ISE integration	
+Lab 1.3. Cisco DNA Center with Cisco ISE integration	
 
 ### Part 2 Building the Fabric	
 Lab 2.1. Designing device and fabric parameters with Cisco DNA Center	
@@ -23,15 +21,13 @@ Lab 2.3. Working with software images
 
 Lab 2.4. Using LAN Automation to build the fabric	
 
-Lab 2.5. Manual underlay configuration	
+Lab 2.5. Day-0 provisioning with PnP workflow	
 
-Lab 2.6. Day-0 provisioning with PnP workflow	
+Lab 2.6. Provisioning network for the fabric	
 
-Lab 2.7. Provisioning network for the fabric	
+Lab 2.7. Creating our SD-Access fabric	
 
-Lab 2.8. Creating our SD-Access fabric	
-
-Lab 2.9. Using templates to customize configurations	
+Lab 2.8. Using templates to customize configurations	
 
 ### Part 3 Basic host connectivity and segmentation policies	
 Lab 3.1. Configuring user address pools and virtual networks	
@@ -52,11 +48,11 @@ Lab 4.4. Configuring SXP for external security group policies support
 Lab 4.5. SG-based external network traffic control	
 
 ### Part 5 Deploying SD-Access services	
-Lab 5.1. Migrating to centralized authentication	
+Lab 5.1. Configuring wireless services	
 
-Lab 5.2. Configuring wireless services	
+Lab 5.2. Monitoring fabric with Assurance	
 
-Lab 5.3. Monitoring fabric with Assurance	
+Lab 5.3. Migrating to centralized authentication	
 
 Lab 5.4. Configuring wireless guest services	
 

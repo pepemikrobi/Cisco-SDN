@@ -1,0 +1,58 @@
+
+service timestamps debug datetime msec
+service timestamps log datetime msec
+!
+hostname POD{{pod}}_R{{router}}
+!
+enable password Admin{{pod}}sisko$
+!
+aaa new-model
+!
+ip domain name sdn.lab
+!
+archive
+ log config
+  logging enable
+  notify syslog contenttype plaintext
+!
+username cliadmin password 0 Admin{{pod}}sisko$
+!
+interface Loopback0
+ ip address 10.1{{pod}}.127.10{{router}} 255.255.255.255
+ ip pim sparse-mode
+ ip router isis 
+!
+interface GigabitEthernet0/0/1
+ dampening
+ {% if router == '1' %}
+ ip address 10.1{{pod}}.80.3 255.255.255.254
+ {% else %}
+ ip address 10.1{{pod}}.80.5 255.255.255.254
+ {% endif %}
+ ip pim sparse-mode
+ ip router isis 
+ load-interval 30
+ negotiation auto
+ bfd interval 100 min_rx 100 multiplier 3
+ no bfd echo
+ clns mtu 1400
+ isis network point-to-point 
+!
+router isis
+ {% if router == '1' %}
+ net 49.0000.1111.1111.1111.00
+ {% else %}
+ net 49.0000.2222.2222.2222.00
+ {% endif %}
+ domain-password sisko
+ metric-style wide
+ log-adjacency-changes
+ nsf ietf
+ bfd all-interfaces
+!
+ip pim rp-address 10.1{{pod}}.66.1
+ip pim register-source Loopback0
+!
+snmp-server community cisco RO
+snmp-server community Admin{{pod}}sisko$ RW
+!         

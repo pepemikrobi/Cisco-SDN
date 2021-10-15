@@ -5,7 +5,7 @@ import urllib3
 from requests.auth import HTTPBasicAuth
 from prettytable import PrettyTable
 
-dnac {
+dnac = {
   "host": "10.1X.1.11",
   "username": "admin",
   "password": "AdmeenXsisko"

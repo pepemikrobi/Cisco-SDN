@@ -40,7 +40,7 @@ password = 'Admeen' + pod + 'sisko'
 token = dnac_login(host, 'admin', password)
 
 headers["x-auth-token"] = token
-uri = "https://10.1" + pod + ".1.11/dna/intent/api/v1/business/sda/border-device?deviceIPAddress=10.1" + pod + ".127.10" + core
+uri = f'https://10.1{pod}.1.11/dna/intent/api/v1/business/sda/border-device?deviceManagementIpAddress=10.1{pod}.127.10{core}'
 req = requests.get(uri, headers=headers, verify=False)
 bcfg = req.json()['deviceSettings']['extConnectivitySettings'][0]['l3Handoff']
 #print ("Index 0: \n" + json.dumps((bcfg), indent=4))

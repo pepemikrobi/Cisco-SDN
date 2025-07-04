@@ -23,13 +23,13 @@ vlan2 = f'30{pod}2' if (int(core) == 1) else f'30{pod}4'
 
 my1 = f'1.1.{pod}.2' if (int(core) == 1) else f'1.1.{pod}.10'
 peer1   = f'1.1.{pod}.1' if (int(core) == 1) else f'1.1.{pod}.9'
-my1v6 = f'1:1:{pod}::2' if (int(core) == 1) else f'1:1:{pod}::A'
-peer1v6 = f'1:1:{pod}::1' if (int(core) == 1) else f'1:1:{pod}::9'
+my1v6 = f'2001:1:{pod}::2' if (int(core) == 1) else f'2001:1:{pod}::A'
+peer1v6 = f'2001:1:{pod}::1' if (int(core) == 1) else f'2001:1:{pod}::9'
 
 my2 = f'1.1.{pod}.6' if (int(core) == 1) else f'1.1.{pod}.14'
 peer2   = f'1.1.{pod}.5' if (int(core) == 1) else f'1.1.{pod}.13'
-my2v6 = f'1:1:{pod}::6' if (int(core) == 1) else f'1:1:{pod}::E'
-peer2v6 = f'1:1:{pod}::5' if (int(core) == 1) else f'1:1:{pod}::D'
+my2v6 = f'2001:1:{pod}::6' if (int(core) == 1) else f'2001:1:{pod}::E'
+peer2v6 = f'2001:1:{pod}::5' if (int(core) == 1) else f'2001:1:{pod}::D'
 
 print ("")
 print (f"vlan {vlan1}")

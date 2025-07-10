@@ -354,7 +354,7 @@
 							],
 							"query": [
 								{
-									"key": "name",
+									"key": "groupNameHierarchy",
 									"value": "global/Polska/Warszawa/Hector"
 								}
 							]
